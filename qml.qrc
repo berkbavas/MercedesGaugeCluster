@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Speedometer.qml</file>
+        <file>CenturyGothic.ttf</file>
+        <file>DepthMaker.qml</file>
+    </qresource>
+</RCC>
