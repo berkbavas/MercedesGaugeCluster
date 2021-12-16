@@ -2,16 +2,18 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
 Item {
-    property double offset: 2
+
+    property double offset: 3
 
     Rectangle {
+
         id: sourceOutter
         radius: (width / 2)
         antialiasing: true
         gradient: Gradient {
             GradientStop {
                 position: 0.0
-                color: "black"
+                color: "transparent"
             }
             GradientStop {
                 position: 0.5
@@ -19,7 +21,7 @@ Item {
             }
             GradientStop {
                 position: 1.0
-                color: "white"
+                color: "#282828"
             }
         }
         anchors {
@@ -29,6 +31,7 @@ Item {
     }
 
     Rectangle {
+
         id: maskOutter
         color: "transparent"
         radius: (width / 2)
@@ -41,6 +44,7 @@ Item {
     }
 
     OpacityMask {
+        // outter effect
         opacity: 0.65
         source: ShaderEffectSource {
             sourceItem: sourceOutter

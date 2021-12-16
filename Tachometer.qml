@@ -10,39 +10,36 @@ CircularGauge {
     }
 
     minimumValue: 0
-    maximumValue: 240
+    maximumValue: 70
     stepSize: 1
 
     style: CircularGaugeStyle {
         id: style
         minimumValueAngle: -130
         maximumValueAngle: 130
-        tickmarkStepSize: 20
-        labelStepSize: 20
+        tickmarkStepSize: 10
+        labelStepSize: 10
         minorTickmarkCount: 1
 
-        labelInset: 22 / 90 * outerRadius
+        labelInset: 24 / 90 * outerRadius
 
         tickmark: Rectangle {
             color: "#ffffff"
-            width: 2.5 / 90 * outerRadius
-            height: 12.0 / 90 * outerRadius
+            width: 3 / 90 * outerRadius
+            height: 14.0 / 90 * outerRadius
             antialiasing: true
         }
 
         minorTickmark: Rectangle {
             color: "#ffffff"
-            width: 1.5 / 90 * outerRadius
-            height: 12.0 / 90 * outerRadius
+            width: 2 / 90 * outerRadius
+            height: 14.0 / 90 * outerRadius
             antialiasing: true
         }
 
         tickmarkLabel: Text {
             font.family: "Century Gothic"
-            font.pixelSize: styleData.value === 10 ? Math.max(
-                                                         6,
-                                                         outerRadius * 0.05) : Math.max(
-                                                         6, outerRadius * 0.125)
+            font.pixelSize: Math.max(6, outerRadius * 0.15)
             text: styleData.value
             antialiasing: true
             color: "#ffffff"
@@ -81,8 +78,8 @@ CircularGauge {
         }
 
         needle: Canvas {
-            width: 3.5 / 90 * outerRadius
-            height: 82 / 90 * outerRadius
+            width: 5 / 90 * outerRadius
+            height: 78 / 90 * outerRadius
             antialiasing: true
             onPaint: {
                 var ctx = getContext('2d')
@@ -96,8 +93,8 @@ CircularGauge {
                 ctx.fillStyle = gradient
 
                 ctx.beginPath()
-                ctx.moveTo(0.3 * width, 0)
-                ctx.lineTo(0.7 * width, 0)
+                ctx.moveTo(0.2 * width, 0)
+                ctx.lineTo(0.8 * width, 0)
                 ctx.lineTo(width, height)
                 ctx.lineTo(0, height)
                 ctx.closePath()
@@ -105,10 +102,12 @@ CircularGauge {
             }
         }
 
-        background: Item {
+        background: Rectangle {
             id: root
             width: 2 * outerRadius
             height: 2 * outerRadius
+            radius: outerRadius
+            color: "#181818"
 
             Canvas {
                 anchors.fill: parent
@@ -116,22 +115,14 @@ CircularGauge {
                     var ctx = getContext("2d")
                     ctx.reset()
 
-                    ctx.strokeStyle = "#d32300"
                     ctx.lineWidth = 12.0 / 90 * outerRadius
 
                     ctx.beginPath()
                     ctx.arc(outerRadius, outerRadius,
                             outerRadius - ctx.lineWidth / 2, degreesToRadians(
-                                valueToAngle(30) - 90), degreesToRadians(
-                                valueToAngle(35) - 90))
-                    ctx.stroke()
-
-                    ctx.beginPath()
-                    ctx.arc(outerRadius, outerRadius,
-                            outerRadius - ctx.lineWidth / 2, degreesToRadians(
-                                valueToAngle(50) - 90), degreesToRadians(
-                                valueToAngle(60) - 90))
-
+                                valueToAngle(62.5) - 90), degreesToRadians(
+                                valueToAngle(70) - 90))
+                    ctx.strokeStyle = "#d32300"
                     ctx.stroke()
                 }
             }
@@ -141,8 +132,8 @@ CircularGauge {
                 y: 0.5 * outerRadius
                 width: 2 * outerRadius
                 font.family: "Century Gothic"
-                font.pixelSize: Math.max(6, outerRadius * 0.075)
-                text: "km/h"
+                font.pixelSize: Math.max(6, outerRadius * 0.09)
+                text: "x100 RPM"
                 antialiasing: true
                 color: "#ffffff"
                 font.weight: Font.Black
