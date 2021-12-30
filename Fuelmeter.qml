@@ -80,7 +80,9 @@ CircularGauge {
             onPaint: {
                 var ctx = getContext('2d')
 
-                var gradient = ctx.createLinearGradient(0, height / 2, width,
+                var gradient = ctx.createLinearGradient(0,
+                                                        height / 2,
+                                                        width,
                                                         height / 2)
 
                 gradient.addColorStop(0, '#fea041')

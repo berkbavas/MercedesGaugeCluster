@@ -9,6 +9,11 @@ CircularGauge {
     value: 0
     stepSize: 1
 
+    function degreesToRadians(degrees) {
+        return degrees * (Math.PI / 180)
+    }
+
+
     style: CircularGaugeStyle {
         id: style
         minimumValueAngle: -115
@@ -54,10 +59,6 @@ CircularGauge {
             }
         }
 
-        function degreesToRadians(degrees) {
-            return degrees * (Math.PI / 180)
-        }
-
         background: Item {
             id: root
             width: 2 * outerRadius
@@ -73,10 +74,11 @@ CircularGauge {
                     ctx.lineWidth = 16.0 / 90 * outerRadius
 
                     ctx.beginPath()
-                    ctx.arc(outerRadius, outerRadius,
-                            outerRadius - ctx.lineWidth / 2, degreesToRadians(
-                                valueToAngle(-58) - 90), degreesToRadians(
-                                valueToAngle(-54) - 90))
+                    ctx.arc(outerRadius,
+                            outerRadius,
+                            outerRadius - ctx.lineWidth / 2,
+                            degreesToRadians(valueToAngle(-58) - 90),
+                            degreesToRadians(valueToAngle(-54) - 90))
                     ctx.stroke()
 
                     ctx.stroke()
