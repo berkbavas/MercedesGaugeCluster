@@ -4,11 +4,6 @@ import QtQuick.Controls.Styles 1.4
 import QtGraphicalEffects 1.0
 
 CircularGauge {
-
-    function degreesToRadians(degrees) {
-        return degrees * (Math.PI / 180)
-    }
-
     minimumValue: 0
     maximumValue: 100
     value: 15

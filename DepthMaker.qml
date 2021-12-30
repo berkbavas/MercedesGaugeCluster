@@ -2,11 +2,9 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
 Item {
-
     property double offset: 3
 
     Rectangle {
-
         id: sourceOutter
         radius: (width / 2)
         antialiasing: true
@@ -31,7 +29,6 @@ Item {
     }
 
     Rectangle {
-
         id: maskOutter
         color: "transparent"
         radius: (width / 2)
@@ -44,7 +41,6 @@ Item {
     }
 
     OpacityMask {
-        // outter effect
         opacity: 0.65
         source: ShaderEffectSource {
             sourceItem: sourceOutter

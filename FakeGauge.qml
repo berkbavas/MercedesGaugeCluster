@@ -4,7 +4,6 @@ import QtQuick.Controls.Styles 1.4
 import QtGraphicalEffects 1.0
 
 CircularGauge {
-
     minimumValue: -115
     maximumValue: 115
     value: 0

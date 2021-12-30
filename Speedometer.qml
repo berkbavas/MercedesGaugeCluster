@@ -4,14 +4,13 @@ import QtQuick.Controls.Styles 1.4
 import QtGraphicalEffects 1.0
 
 CircularGauge {
+    minimumValue: 0
+    maximumValue: 240
+    stepSize: 1
 
     function degreesToRadians(degrees) {
         return degrees * (Math.PI / 180)
     }
-
-    minimumValue: 0
-    maximumValue: 240
-    stepSize: 1
 
     style: CircularGaugeStyle {
         id: style
@@ -39,10 +38,7 @@ CircularGauge {
 
         tickmarkLabel: Text {
             font.family: "Century Gothic"
-            font.pixelSize: styleData.value === 10 ? Math.max(
-                                                         6,
-                                                         outerRadius * 0.05) : Math.max(
-                                                         6, outerRadius * 0.125)
+            font.pixelSize: styleData.value === 10 ? Math.max(6,outerRadius * 0.05) : Math.max(6, outerRadius * 0.125)
             text: styleData.value
             antialiasing: true
             color: "#ffffff"
@@ -87,12 +83,9 @@ CircularGauge {
             onPaint: {
                 var ctx = getContext('2d')
 
-                var gradient = ctx.createLinearGradient(0, height / 2, width,
-                                                        height / 2)
-
+                var gradient = ctx.createLinearGradient(0, height / 2, width, height / 2)
                 gradient.addColorStop(0, '#fea041')
                 gradient.addColorStop(1, '#cd5c0b')
-
                 ctx.fillStyle = gradient
 
                 ctx.beginPath()
@@ -120,17 +113,19 @@ CircularGauge {
                     ctx.lineWidth = 12.0 / 90 * outerRadius
 
                     ctx.beginPath()
-                    ctx.arc(outerRadius, outerRadius,
-                            outerRadius - ctx.lineWidth / 2, degreesToRadians(
-                                valueToAngle(30) - 90), degreesToRadians(
-                                valueToAngle(35) - 90))
+                    ctx.arc(outerRadius,
+                            outerRadius,
+                            outerRadius - ctx.lineWidth / 2,
+                            degreesToRadians(valueToAngle(30) - 90),
+                            degreesToRadians(valueToAngle(35) - 90))
                     ctx.stroke()
 
                     ctx.beginPath()
-                    ctx.arc(outerRadius, outerRadius,
-                            outerRadius - ctx.lineWidth / 2, degreesToRadians(
-                                valueToAngle(50) - 90), degreesToRadians(
-                                valueToAngle(60) - 90))
+                    ctx.arc(outerRadius,
+                            outerRadius,
+                            outerRadius - ctx.lineWidth / 2,
+                            degreesToRadians(valueToAngle(50) - 90),
+                            degreesToRadians(valueToAngle(60) - 90))
 
                     ctx.stroke()
                 }
