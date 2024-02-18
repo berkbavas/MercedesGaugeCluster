@@ -7,6 +7,7 @@ Indicators were designed by my sister [Gamze Bavaş](https://www.linkedin.com/in
 2) Open `MercedesGaugeCluster.pro` with `QtCreator` and build & run it. 
 
 ## Screenshot
+![Screenshot](https://github.com/berkbavas/MercedesGaugeCluster/assets/53399385/a2734ea9-d658-47f8-bf13-489c655bae7d)
 
 ## Keywords
 `QML`,
