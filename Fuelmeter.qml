@@ -111,7 +111,7 @@ CircularGauge {
                 y: 0.075 * outerRadius
                 width: 5 * 0.0335 * outerRadius
                 height: 6 * 0.0335 * outerRadius
-                source: "Resources/Indicators/fuel.svg"
+                source: "qrc:/Resources/Indicators/fuel.svg"
                 antialiasing: true
                 visible: false
             }

@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
+        <file>Main.qml</file>
         <file>Speedometer.qml</file>
         <file>Tachometer.qml</file>
         <file>Fuelmeter.qml</file>

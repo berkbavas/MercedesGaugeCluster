@@ -11,7 +11,7 @@ Window {
     color: "#101010"
 
     FontLoader {
-        source: "Resources/Fonts/CenturyGothic.ttf"
+        source: "qrc:/Resources/Fonts/CenturyGothic.ttf"
     }
 
     Row {

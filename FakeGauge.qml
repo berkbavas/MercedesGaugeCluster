@@ -13,7 +13,6 @@ CircularGauge {
         return degrees * (Math.PI / 180)
     }
 
-
     style: CircularGaugeStyle {
         id: style
         minimumValueAngle: -115
