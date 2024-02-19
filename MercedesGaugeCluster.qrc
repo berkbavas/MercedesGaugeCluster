@@ -1,19 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>Main.qml</file>
-        <file>Speedometer.qml</file>
-        <file>Tachometer.qml</file>
-        <file>Fuelmeter.qml</file>
-        <file>TemperatureMeter.qml</file>
-        <file>SpeedometerContainer.qml</file>
-        <file>DepthMaker.qml</file>
-        <file>TachometerContainer.qml</file>
-        <file>LeftGaugesContainer.qml</file>
-        <file>FakeGauge.qml</file>
-        <file>GoodInnerShadow.qml</file>
         <file>Resources/Fonts/CenturyGothic.ttf</file>
-        <file>IndicatorContainer.qml</file>
-        <file>Indicator.qml</file>
         <file>Resources/Indicators/abs.svg</file>
         <file>Resources/Indicators/battery-low.svg</file>
         <file>Resources/Indicators/battery.svg</file>
@@ -26,5 +13,18 @@
         <file>Resources/Indicators/shelter-belt.svg</file>
         <file>Resources/Indicators/temperature.svg</file>
         <file>Resources/Indicators/wiper.svg</file>
+        <file>Qml/DepthMaker.qml</file>
+        <file>Qml/FakeGauge.qml</file>
+        <file>Qml/Fuelmeter.qml</file>
+        <file>Qml/GoodInnerShadow.qml</file>
+        <file>Qml/Indicator.qml</file>
+        <file>Qml/IndicatorContainer.qml</file>
+        <file>Qml/LeftGaugesContainer.qml</file>
+        <file>Qml/Main.qml</file>
+        <file>Qml/Speedometer.qml</file>
+        <file>Qml/SpeedometerContainer.qml</file>
+        <file>Qml/Tachometer.qml</file>
+        <file>Qml/TachometerContainer.qml</file>
+        <file>Qml/TemperatureMeter.qml</file>
     </qresource>
 </RCC>
