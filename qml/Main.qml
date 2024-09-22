@@ -19,11 +19,11 @@ Window {
     property double scaling: Math.min(window.height / 1280, window.width / 720)
 
     FontLoader {
-        source: "qrc:/resources/fonts/CenturyGothic.ttf"
+        source: "qrc:/resources/Fonts/CenturyGothic.ttf"
     }
 
     FontLoader {
-        source: "qrc:/resources/fonts/OdibeeSans-Regular.ttf"
+        source: "qrc:/resources/Fonts/OdibeeSans-Regular.ttf"
     }
 
     Item {

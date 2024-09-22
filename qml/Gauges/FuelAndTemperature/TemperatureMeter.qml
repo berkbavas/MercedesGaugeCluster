@@ -53,7 +53,7 @@ CircularGauge {
                 y: 0.075 * outerRadius
                 width: 0.1875 * outerRadius
                 height: 0.225 * outerRadius
-                source: "qrc:/resources/indicators/temperature.svg"
+                source: "qrc:/resources/Indicators/temperature.svg"
                 antialiasing: true
                 visible: false
             }
