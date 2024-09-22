@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/Fonts/CenturyGothic.ttf</file>
+        <file>Resources/Fonts/OdibeeSans-Regular.ttf</file>
+        <file>Resources/Indicators/abs.svg</file>
+        <file>Resources/Indicators/battery-low.svg</file>
+        <file>Resources/Indicators/battery.svg</file>
+        <file>Resources/Indicators/caution.svg</file>
+        <file>Resources/Indicators/fuel.svg</file>
+        <file>Resources/Indicators/headlight.svg</file>
+        <file>Resources/Indicators/lamp.svg</file>
+        <file>Resources/Indicators/oilcup.svg</file>
+        <file>Resources/Indicators/park.svg</file>
+        <file>Resources/Indicators/shelter-belt.svg</file>
+        <file>Resources/Indicators/temperature.svg</file>
+        <file>Resources/Indicators/wiper.svg</file>
+        <file>Qml/Main.qml</file>
+        <file>Qml/Constants.qml</file>
+        <file>Qml/qmldir</file>
+        <file>Qml/Util/Foreground.qml</file>
+        <file>Qml/Util/Neddle.qml</file>
+        <file>Qml/Gauges/FuelAndTemperature/Tickmarks.qml</file>
+        <file>Qml/Gauges/FuelAndTemperature/FuelAndTemperatureMeterContainer.qml</file>
+        <file>Qml/Gauges/FuelAndTemperature/Fuelmeter.qml</file>
+        <file>Qml/Gauges/FuelAndTemperature/TemperatureMeter.qml</file>
+        <file>Qml/Gauges/Speedometer/Speedometer.qml</file>
+        <file>Qml/Gauges/Speedometer/SpeedometerContainer.qml</file>
+        <file>Qml/Gauges/Tachometer/Tachometer.qml</file>
+        <file>Qml/Gauges/Tachometer/TachometerContainer.qml</file>
+        <file>Qml/IndicatorPanel/Indicator.qml</file>
+        <file>Qml/IndicatorPanel/LeftIndicatorPanel.qml</file>
+        <file>Qml/Util/GoodInnerShadow.qml</file>
+        <file>Qml/IndicatorPanel/RightIndicatorPanel.qml</file>
+        <file>Qml/IndicatorPanel/CenterIndicatorPanel.qml</file>
+        <file>Qml/Util/SignalArrow.qml</file>
+        <file>Qml/IndicatorPanel/SignalIndicators.qml</file>
+    </qresource>
+</RCC>
